@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: websdk
+
+server:
+  port: 1178

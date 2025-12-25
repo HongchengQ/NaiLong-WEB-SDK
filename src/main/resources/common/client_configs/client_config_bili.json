@@ -1,0 +1,200 @@
+{
+  "Code": 200,
+  "Data": {
+    "AppConfig": {
+      "AppropriateAge": {
+        "Level": "18+",
+        "Msg": ""
+      },
+      "DetectionAddress": {
+        "Auto": {
+          "DNS": [
+            "${url}/meta/serverlist.html",
+            "${url}"
+          ],
+          "HTTP": [
+            "${url}/meta/serverlist.html",
+            "${url}"
+          ],
+          "MTR": [
+            "${url}/meta/serverlist.html",
+            "${url}"
+          ],
+          "PING": [
+            "${url}/meta/serverlist.html",
+            "${url}"
+          ],
+          "TCP": [
+            "${url}/meta/serverlist.html",
+            "${url}"
+          ]
+        },
+        "Enable": true,
+        "Internet": "https://www.baidu.com"
+      },
+      "SLS": {
+        "AccessKeyID": "7b5d0ffd0943f26704fc547a871c68b1b5d56b5c9caeb354205b81f445d7af59",
+        "AccessKeySecret": "4a5e9cc8a50819290c9bfa1fedc79da7c50e85189a05eb462a3d28a7688eabb0",
+        "ENABLE": true
+      },
+      "Share": {
+        "CaptureScreen": {
+          "AutoCloseDelay": 0,
+          "Enabled": false
+        },
+        "PengYouQuan": {
+          "AppID": "",
+          "Enabled": false,
+          "UniversalLink": ""
+        },
+        "QQ": {
+          "AppID": "",
+          "Enabled": false,
+          "UniversalLink": ""
+        },
+        "Qzone": {
+          "AppID": "",
+          "Enabled": false,
+          "UniversalLink": ""
+        },
+        "Sort": null,
+        "WeiXin": {
+          "AppID": "",
+          "Enabled": false,
+          "UniversalLink": ""
+        },
+        "Weibo": {
+          "AppKey": "",
+          "Enabled": false,
+          "RedirectURL": "",
+          "UniversalLink": ""
+        }
+      },
+      "ThirdInfoShareList": "${url}/cn-nova/shared_list",
+      "Version": {
+        "ChildPrivacyAgreement": "0.1",
+        "ErrorCode": "5.3",
+        "PassportPrivacyAgreement": "0.1",
+        "PassportUserAgreement": "0.1",
+        "PrivacyAgreement": "0.1",
+        "UserAgreement": "0.1",
+        "UserDestroy": "0.1"
+      }
+    },
+    "ChannelConfig": {
+      "Adjust": {
+        "AppID": "4c7k4f2lwlc0",
+        "Debug": false,
+        "Enable": true,
+        "EventTokens": {
+          "activity_battle": "iwliza",
+          "activity_tower_defense": "zi5dh0",
+          "add_friend": "nrduuf",
+          "authorizationlevel_10": "yx4llt",
+          "authorizationlevel_20": "sv93t7",
+          "authorizationlevel_5": "a07iie",
+          "boss_rush": "medmnj",
+          "chapter0_1_complete": "vepq75",
+          "chapter0_2_complete": "c2801y",
+          "chapter0_complete": "1w36yo",
+          "chapter2_complete": "s654nb",
+          "confirm_order": "qm163h",
+          "daily_instance_battle": "a6lwbf",
+          "daily_mission_complete": "9xobju",
+          "equipment_instance_battle": "537gln",
+          "first_gacha10": "nves84",
+          "guaranteed5star_gacha10": "ljyulu",
+          "infinity_tower_battle": "yqikr3",
+          "joint_drill_battle": "ghrr2t",
+          "limited_disc_gacha10": "ixx5dc",
+          "limited_trekker_gacha10": "leaxx8",
+          "newbie_tutorial": "5wwzfu",
+          "normal_tutorial": "jb2a31",
+          "purchase_click": "blwlze",
+          "purchase_complete": "ewdue1",
+          "purchase_deluxebp": "eimm2v",
+          "purchase_diamond": "8aniih",
+          "purchase_discmusic": "6fak19",
+          "purchase_launchdisc": "1v6y1i",
+          "purchase_launchtrekker": "6xq787",
+          "purchase_monthdiscvoucher": "7zcb5p",
+          "purchase_monthlycard": "lj3w0p",
+          "purchase_monthtrekkervoucher": "ugdv2o",
+          "purchase_newdiscpack": "w8jij2",
+          "purchase_newtrekkerpack": "h111ld",
+          "purchase_newtrekkerstandard": "4uill0",
+          "purchase_skin": "lf3nqo",
+          "purchase_srtrekkerselect": "9munv0",
+          "purchase_standardbp": "ebqk7e",
+          "purchase_starterpack": "q7u4d0",
+          "purchase_trekkercelebration": "3d3l31",
+          "purchase_trekkerdessert": "t227tu",
+          "purchase_trekkerupgrade": "b778my",
+          "purchase_weekdiscres": "10isih",
+          "purchase_weektrekkerres": "g4bsp0",
+          "region_boss_battle": "8g4voa",
+          "resource_fetch": "7q8853",
+          "role_create": "n45fu3",
+          "role_login": "2hecn2",
+          "setting_choice": "abehbv",
+          "skill_instance_battle": "b356f4",
+          "standard_disc_gacha10": "5pfeik",
+          "standard_trekker_gacha10": "8j2x80",
+          "star_tower": "wttkjg",
+          "traveler_duel_battle": "vkq1k7",
+          "week_boss": "hu2ol2",
+          "ysdk_account_create": "fby428",
+          "ysdk_err": "1z4hfh",
+          "ysdk_init": "9vrmzw",
+          "ysdk_role_info_upload": "upld6g",
+          "ysdk_user_login": "1ufttc",
+          "ysdk_user_open_survey": "7iwnnd"
+        }
+      },
+      "AiHelp": {
+        "DisplayType": "Browser",
+        "Enable": true,
+        "ServiceInterfaceURL": "",
+        "ServiceURL": ""
+      },
+      "AllowLogin": true,
+      "AntiAddiction": {
+        "Enable": true
+      },
+      "AppropriateAge": {
+        "Level": "18+",
+        "Msg": "《星塔旅人》游戏适龄提示\\n1、本游戏是一款玩法简单的角色扮演游戏，适用于年满18周岁及以上的用户。\\n2、本游戏基于架空的故事背景和幻想世界观，剧情简单且积极向上，没有基于真实历史和现实事件的改编内容。游戏玩法基于肢体操作，鼓励玩家通过训练达成目标。游戏中有少量自定义文字系统，该社交系统遵循相关法律法规进行管理。\\n3、本游戏中有用户实名认证系统，对年满18周岁及以上的用户开放，使用18周岁以下的身份信息认证账号将无法进入游戏。"
+      },
+      "BiliBili": {
+        "APPID": "10976",
+        "AppKey": "af09c3b950c9ca83e27793d12762ea97db8a3ff84d2127a0ea97f2ef4da4eeeecb8d8a7ecb8b392527d5e6d2d28d61f0",
+        "MerchantID": "3233",
+        "SecretKey": "",
+        "ServerID": "10111",
+        "ServerName": "bilibili区"
+      },
+      "Debug": 1,
+      "JPush": {
+        "Debug": false,
+        "Key": ""
+      },
+      "Login": {
+        "Default": "mobile",
+        "EnableList": [
+          "mobile",
+          "bilibili"
+        ]
+      },
+      "Taptap": {
+        "ClientID": "",
+        "ClientPublicKey": "",
+        "ClientToken": ""
+      },
+      "Udata": {
+        "Enable": true,
+        "MSUAKey": "-----BEGIN CERTIFICATE-----\\nMIIFmzCCA4OgAwIBAgIDAP1zMA0GCSqGSIb3DQEBCwUAMIGAMQswCQYDVQQGEwJD\\nTjEQMA4GA1UECAwHQmVpamluZzEMMAoGA1UECgwDTVNBMREwDwYDVQQLDAhPQUlE\\nX1NESzEeMBwGA1UEAwwVY29tLmJ1bi5taWl0bWRpZC5zaWduMR4wHAYJKoZIhvcN\\nAQkBFg9tc2FAY2FpY3QuYWMuY24wHhcNMjQxMTEyMTY1NDA2WhcNMjUxMTEzMTY1\\nNDA2WjCBjDELMAkGA1UEBhMCQ04xEDAOBgNVBAgMB0JlaWppbmcxEDAOBgNVBAcM\\nB0JlaWppbmcxDzANBgNVBAoMBnlvc3RhcjEjMCEGA1UEAwwaY29tLlJvYW1pbmdT\\ndGFyLlN0ZWxsYVNvcmExIzAhBgkqhkiG9w0BCQEWFHNvbmcubGl1QHlvLXN0YXIu\\nY29tMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAshgvU9xluAUrL51T\\nam/Ph5Z4yQEL0z3ex9d5tX/eOblLFGGDGmmbiAmI2+Knn2VMkIMsQVE2HwTk6RO3\\nHHXDaGYAqdOUU54N9M75HOKY2sCSJDXiAtjRpTe0arjuCmv9Oi0rquTfm3y+/BND\\nMGQIp6MUrMH/8jWOUdSydm9yOwZ1u61Um+ymwdEOM+SpridOIT1ZewbUnX1Z750V\\nUwQ0Zv3DIMrqRJfgghlvB1Ho8zx3R3h0Sta8e37sECPuY4DJg2ETV2Q+AJidLwpb\\nq0EeWrzdsTrsQfB27QfpUIrbDZ0Ar2GNV6eLOxbX5k+icwzUP/70YF8WKzmlRX6G\\nP7oKzvkn2bano/pnSkdyoDmgAO+bfM3CXzOlhq2zyZd8R3Nm4Q+JBsEZEwHBye1k\\nDiK1s/OQjwnyKGIfJ2ZQZbAjWpiSYej5dpwLZp3zLQ7mGSaP9kCuifyhbcsLGCHp\\nFOn4kbCWmrpwX+bA/SMW7yXEUQfh0QrMkimBIPM+15YfdHx4pn1IE9BreOP6Pp8z\\n4ewqvQMunVrTMWBce/GdXqWqTiXVDaWViBE/MEB64iZmydfE5YnRkQFvOZFtpGtn\\nK+LuhHevCUGvpzfpG0tHQ3rrzgRjrIqqgsuWngNKM/PB0VliIGtNjy02WxLOD3WK\\nzcx1giEo55N+CqcMMWCVJ+mactcCAwEAAaMQMA4wDAYDVR0TAQH/BAIwADANBgkq\\nhkiG9w0BAQsFAAOCAgEACgZXL1JPsGlr1lVwbLTun3I8nZGAVXr3yhE3kcUYYX/F\\n+dgyDlJmC8ZRNzhvAUPcUrsaic8s7JbMuTZzCLdw2fAkQWEs3nuN8zhZ3Lh1o2t9\\n6t0V7ZnrahJn3OyY0XFfbLAuDtFWedxeNwSPL0hEVo13luCC/1N8dSZje/lEaTty\\ngRTagbkMpHIDryOR5mPEob4UtSLdkcyWWNiuhvNFhY7TwXbPH6Mu/I9V79wwIkrw\\nb45SdFgWYDPaNbBhWnvmKzXOZP1A+6x7wHonbvWf3oEPL+d+xyUXMpAEVnCpQS+A\\nUgst9HuQcgEbyi6waQ2I21wkXJ4ajMM0TeHUfJDI/S/1mur8ijFQ6BToPUwPZ158\\nxQNaeQalPNHiFuCuJvQlbkrlJVZPU0VKo+tTh2xxD0h7CyqwERV05h3RyS5auDf2\\nQHvijp55H9mej8/K79rvwlMLvNI93FCjnWCgmy5/4AiFsm8R+gnEfVSpiSOzKYqS\\ntLZ1HBaHFIgvAvW0dN1Qz8PXnYMRt7N6/fg0ZeXRiUbmGwuTxdfCBP5OyyWpIqtN\\n91cpzIH8lYx19oEV5fNWMBbUjbZeQNmcSaz2NSKoM3PpFBkwW/bedqeUCuhj/uT+\\nYNjvej3TMTXAi9Ln4eajGBIkpZlmtbnPAA4L4Kq2BedHbebKDVg+Ga5Eyy6Q/Ng=\\n-----END CERTIFICATE-----"
+      }
+    }
+  },
+  "Msg": "OK"
+}

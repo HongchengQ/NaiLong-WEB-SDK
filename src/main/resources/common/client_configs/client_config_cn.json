@@ -1,0 +1,146 @@
+{
+  "Code": 200,
+  "Data": {
+    "AppConfig": {
+      "AppropriateAge": {
+        "Level": "18+",
+        "Msg": "《星塔旅人》游戏适龄提示\n1、本游戏是一款玩法简单的角色扮演游戏，适用于年满18周岁及以上的用户。\n2、本游戏基于架空的故事背景和幻想世界观，剧情简单且积极向上，没有基于真实历史和现实事件的改编内容。游戏玩法基于肢体操作，鼓励玩家通过训练达成目标。游戏中有少量自定义文字系统，该社交系统遵循相关法律法规进行管理。\n3、本游戏中有用户实名认证系统，对年满18周岁及以上的用户开放，使用18周岁以下的身份信息认证账号将无法进入游戏。"
+      },
+      "Captcha": {
+        "AppID": 191947906,
+        "Enable": true
+      },
+      "DestroyUser": {
+        "Days": 15,
+        "Enable": true
+      },
+      "DetectionAddress": {
+        "Auto": {
+          "DNS": [
+            "${url}/meta/serverlist.html",
+            "${url}"
+          ],
+          "HTTP": [
+            "${url}/meta/serverlist.html",
+            "${url}"
+          ],
+          "MTR": [
+            "${url}/meta/serverlist.html",
+            "${url}"
+          ],
+          "PING": [
+            "${url}/meta/serverlist.html",
+            "${url}"
+          ],
+          "TCP": [
+            "${url}/meta/serverlist.html",
+            "${url}"
+          ]
+        },
+        "Enable": true,
+        "Internet": "https://www.baidu.com"
+      },
+      "EnableTextReview": true,
+      "NicknameReg": "^[A-Za-z0-9一-龥]{2,16}$",
+      "Passport": {
+        "AuthCodeCoolDownDays": 90,
+        "AuthCodeValidHour": 48,
+        "DestroyDays": 15,
+        "ModifyEmailDays": 30,
+        "ModifyMobileDays": 30,
+        "Prefix": "YS"
+      },
+      "PassportPopup": {
+        "Enable": false,
+        "Text": ""
+      },
+      "SLS": {
+        "AccessKeyID": "7b5d0ffd0943f26704fc547a871c68b1b5d56b5c9caeb354205b81f445d7af59",
+        "AccessKeySecret": "4a5e9cc8a50819290c9bfa1fedc79da7c50e85189a05eb462a3d28a7688eabb0",
+        "ENABLE": true
+      },
+      "Share": {
+        "CaptureScreen": {
+          "AutoCloseDelay": 0,
+          "Enabled": false
+        },
+        "PengYouQuan": {
+          "AppID": "",
+          "Enabled": false,
+          "UniversalLink": ""
+        },
+        "QQ": {
+          "AppID": "",
+          "Enabled": false,
+          "UniversalLink": ""
+        },
+        "Qzone": {
+          "AppID": "",
+          "Enabled": false,
+          "UniversalLink": ""
+        },
+        "Sort": null,
+        "WeiXin": {
+          "AppID": "",
+          "Enabled": false,
+          "UniversalLink": ""
+        },
+        "Weibo": {
+          "AppKey": "",
+          "Enabled": false,
+          "RedirectURL": "",
+          "UniversalLink": ""
+        }
+      },
+      "ThirdInfoShareList": "https://${url}/cn-nova/shared_list",
+      "Version": {
+        "ChildPrivacyAgreement": "0.1",
+        "ErrorCode": "5.3",
+        "PassportPrivacyAgreement": "0.1",
+        "PassportUserAgreement": "0.1",
+        "PrivacyAgreement": "0.1",
+        "UserAgreement": "0.1",
+        "UserDestroy": "0.1"
+      }
+    },
+    "ChannelConfig": {
+      "Adjust": {
+        "AppID": "",
+        "Debug": false,
+        "Enable": false,
+        "EventTokens": null
+      },
+      "AiHelp": {
+        "DisplayType": "WebView",
+        "Enable": true,
+        "ServiceInterfaceURL": "https://customer.yostar.net/",
+        "ServiceURL": "https://customer-pc.yostar.net/#/"
+      },
+      "AntiAddiction": {
+        "Enable": true
+      },
+      "Debug": 1,
+      "JPush": {
+        "Debug": false,
+        "Key": ""
+      },
+      "Login": {
+        "Default": "mobile",
+        "EnableList": [
+          "mobile",
+          "taptap"
+        ]
+      },
+      "OneKeyLoginSecret": "5c222d7c997339c921bd4fdcb7549ab4",
+      "Taptap": {
+        "ClientID": "9aeghiagor7hp43smv",
+        "ClientPublicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwp10sKQjAn+kxSxZebHBgl3Tuqjapxdtqzy68y2CPzELHVeBQpK6jPnHyjvZcpgsW3/Rr4hyzPsxMHp7akNRfkOy2jqEGl/2hDeYpSsvK4vw9triXz4DTLESpU+RWfTglf3LRHB76RJggcGw0Pt+QAItHlOMQH+9LBuWtnS+bcf2YD+kC4jTmvr2dB6i3dhyaorVuT2OfnTRDZREU0WauWdACWHyaUELwA/JfZW+ir88k++qEjxaq76avRXzfJ0SuA8lqJKRirBc4dgMLvpjpjy1mVV3us64fSyAYwqUFCFNT5HT4/MMCbD4YZs20pgT8sUG04kbxlA1qu6sIh2BHwIDAQAB",
+        "ClientToken": "ENWpPiooc3lI3ZNVNQNOXWZ7dE4YrVOsbMY7b1Li"
+      },
+      "Udata": {
+        "Enable": true
+      }
+    }
+  },
+  "Msg": "OK"
+}

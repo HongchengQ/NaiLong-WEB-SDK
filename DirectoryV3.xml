@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <trees>
+     <tree path="/src/main/java/com/nailong/websdk/service" title="逻辑处理"/>
+     <tree path="/src/main/java/com/nailong/websdk/controller" title="WEB 请求和响应"/>
+     <tree path="/src/main/java/com/nailong/websdk/pojo" title="实体类"/>
+     <tree path="/src/main/java/com/nailong/websdk/dao" title="数据库接口"/>
+     <tree path="/src/main/java/com/nailong/websdk/service/impl" title="具体的实现逻辑"/>
+ </trees>
