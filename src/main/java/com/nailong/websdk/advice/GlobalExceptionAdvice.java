@@ -1,5 +1,8 @@
-package com.nailong.websdk.exception;
+package com.nailong.websdk.advice;
 
+import com.nailong.websdk.exception.AuthorizationHeadException;
+import com.nailong.websdk.exception.BadRequestException;
+import com.nailong.websdk.exception.CommonException;
 import com.nailong.websdk.pojo.HttpRsp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -8,6 +11,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentConversionNotSupportedException;
+import tools.jackson.databind.DatabindException;
+import tools.jackson.databind.exc.ValueInstantiationException;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -16,7 +21,33 @@ import java.util.stream.Collectors;
 
 @RestControllerAdvice
 @Slf4j
-public class GlobalExceptionHandler {
+public class GlobalExceptionAdvice {
+
+    @ExceptionHandler(DatabindException.class)
+    public Object handleDatabindException(DatabindException e) {
+        log.error("json 解析异常 -> {}", e.getMessage());
+        return processResponse(new CommonException(e.getOriginalMessage(), 100400)) ;
+    }
+
+    @ExceptionHandler(AuthorizationHeadException.class)
+    public Object handleAuthorizationHeadException(AuthorizationHeadException e) {
+        log.error("认证请求头异常 -> {}", e.getMessage());
+        return processResponse(e);
+    }
+
+    @ExceptionHandler(CommonException.class)
+    public Object handleBadRequestException(CommonException e) {
+        log.error("自定义异常 -> {} , 异常原因：{}  ", e.getClass().getName(), e.getMessage());
+        log.debug("", e);
+        return processResponse(e);
+    }
+
+    @ExceptionHandler(ValueInstantiationException.class)
+    public Object handleValueInstantiationException(ValueInstantiationException e) {
+        log.error("实例解析异常 -> {}", e.getMessage());
+        log.debug("", e);
+        return processResponse(new BadRequestException("实例解析异常"));
+    }
 
     @ExceptionHandler(FileNotFoundException.class)
     public Object handleFileNotFoundException(FileNotFoundException e) {
@@ -56,13 +87,6 @@ public class GlobalExceptionHandler {
         return processResponse(new BadRequestException("请求方法参数处理异常"));
     }
 
-    @ExceptionHandler(CommonException.class)
-    public Object handleBadRequestException(CommonException e) {
-        log.error("自定义异常 -> {} , 异常原因：{}  ", e.getClass().getName(), e.getMessage());
-        log.debug("", e);
-        return processResponse(e);
-    }
-
     @ExceptionHandler(Exception.class)
     public Object handleRuntimeException(Exception e) {
         log.error("其他异常 : ", e);
@@ -70,8 +94,11 @@ public class GlobalExceptionHandler {
     }
 
     private ResponseEntity<Object> processResponse(CommonException e) {
+        // 大于三位数时：代表需要把状态码转交到 body，所以协议层就得是200
+        int statusCode = (e.getCode() > 999) ? 200 : e.getCode();
+
         return ResponseEntity
-                .status(e.getCode())
+                .status(statusCode)
                 .body(HttpRsp.error(e));
     }
 }

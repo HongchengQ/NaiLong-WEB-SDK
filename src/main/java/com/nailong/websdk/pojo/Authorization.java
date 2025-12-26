@@ -1,32 +1,59 @@
 package com.nailong.websdk.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 public class Authorization {
-    private Head Head;
+    @NonNull
+    @JsonProperty("Head")
+    private Head head;
+
+    @JsonProperty("Sign")
     private String Sign;
 
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
     public static class Head {
-        private String PID;
-        private String Channel;
-        private String Platform;
-        private String Lang;
-        private String DeviceID;
-        private String Version;
-        private String GVersionNo;
-        private String GBuildNo;
-        private String RID;
-        private String DeviceModel;
-        private long Time;
+        @NonNull
+        @JsonProperty("PID")
+        private String pid;
+
+        @NonNull
+        @JsonProperty("Channel")
+        private String channel;
+
+        @NonNull
+        @JsonProperty("Platform")
+        private String platform;
+
+        @JsonProperty("Lang")
+        private String lang;
+
+        @JsonProperty("DeviceID")
+        private String deviceID;
+
+        @JsonProperty("Version")
+        private String version;
+
+        @JsonProperty("GVersionNo")
+        private String gVersionNo;
+
+        @JsonProperty("GBuildNo")
+        private String gBuildNo;
+
+        @JsonProperty("RID")
+        private String rid;
+
+        @JsonProperty("DeviceModel")
+        private String deviceModel;
+
+        @NonNull
+        @JsonProperty("Time")
+        private Long time;
     }
 }

@@ -1,7 +1,9 @@
 package com.nailong.websdk.utils;
 
 import org.springframework.util.ObjectUtils;
-import tools.jackson.databind.ObjectMapper;
+import tools.jackson.core.json.JsonFactory;
+import tools.jackson.core.json.JsonReadFeature;
+import tools.jackson.databind.json.JsonMapper;
 
 public class JsonUtils {
     /**
@@ -12,11 +14,17 @@ public class JsonUtils {
      * @param <T>
      * @return
      */
-    public static <T> T parseJsonToObject(String jsonStr, Class<T> clazz) {
+    public static <T> T parseJsonStrToObject(String jsonStr, Class<T> clazz) {
         if (ObjectUtils.isEmpty(jsonStr)) {
             return null;
         }
-        ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.readValue(jsonStr, clazz);
+
+        JsonFactory jsonFactory = JsonFactory.builder()
+                .configure(JsonReadFeature.ALLOW_JAVA_COMMENTS, true)// 允许注释
+                .configure(JsonReadFeature.ALLOW_TRAILING_COMMA, true)// 允许尾随符号
+                .build();
+        JsonMapper jsonMapper = new JsonMapper(jsonFactory);
+
+        return jsonMapper.readValue(jsonStr, clazz);
     }
 }

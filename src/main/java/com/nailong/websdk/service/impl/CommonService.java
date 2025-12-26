@@ -22,7 +22,7 @@ public class CommonService implements ICommonService {
         Authorization.Head head = authorization.getHead();
         String region;
 
-        if (head.getPID().equals("CN-NOVA")) {
+        if (head.getPid().equals("CN-NOVA")) {
             if (head.getChannel().equals("bilibili")) {
                 region = "bili";
                 return FileUtils.readClientConfigFile(region);

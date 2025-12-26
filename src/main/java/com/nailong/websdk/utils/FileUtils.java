@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import static com.nailong.websdk.utils.JsonUtils.parseJsonToObject;
+import static com.nailong.websdk.utils.JsonUtils.parseJsonStrToObject;
 
 public class FileUtils {
     /**
@@ -49,7 +49,7 @@ public class FileUtils {
     public static <T> T fileToObject(String fileName, Class<T> clazz) throws IOException {
         String jsonStr = getFileStr(fileName);
 
-        return parseJsonToObject(jsonStr, clazz);
+        return parseJsonStrToObject(jsonStr, clazz);
     }
 
     /**

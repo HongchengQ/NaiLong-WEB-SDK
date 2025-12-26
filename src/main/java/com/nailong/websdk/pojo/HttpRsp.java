@@ -32,7 +32,10 @@ public class HttpRsp {
     }
 
     public static HttpRsp error(CommonException e) {
-        return new HttpRsp(e.getCode(), "{}", e.getMessage());
+
+        return new HttpRsp(e.getCode(), "{}",
+                e.getMessage() // 防止暴露 pojo 路径
+                        .replaceAll("com.*.pojo\\.?", ""));
     }
 
     public boolean success() {
