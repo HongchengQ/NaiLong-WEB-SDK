@@ -1,7 +1,7 @@
 package com.nailong.websdk.service;
 
-import com.nailong.websdk.pojo.Authorization;
-import com.nailong.websdk.pojo.HttpRsp;
+import com.nailong.websdk.domain.Authorization;
+import com.nailong.websdk.domain.HttpRsp;
 
 import java.io.IOException;
 

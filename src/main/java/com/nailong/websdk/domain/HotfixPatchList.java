@@ -1,4 +1,4 @@
-package com.nailong.websdk.pojo;
+package com.nailong.websdk.domain;
 
 import com.nailong.websdk.proto.Pb;
 import lombok.Data;

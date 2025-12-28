@@ -1,15 +1,14 @@
 package com.nailong.websdk.controller;
 
-import com.nailong.websdk.dao.TestRepository;
-import com.nailong.websdk.pojo.entity.dto.BookInput;
+import com.nailong.websdk.domain.dto.UserInput;
+import com.nailong.websdk.domain.po.User;
+import com.nailong.websdk.domain.po.UserDraft;
 import com.nailong.websdk.proto.Pb;
 import com.nailong.websdk.utils.AeadHelper;
 import com.nailong.websdk.utils.Utils;
 import lombok.RequiredArgsConstructor;
 import org.babyfish.jimmer.sql.JSqlClient;
 import org.springframework.web.bind.annotation.*;
-
-import java.math.BigDecimal;
 
 @RestController
 @RequestMapping(value = "/admin", method = {RequestMethod.GET, RequestMethod.POST})
@@ -28,24 +27,42 @@ public class AdminController {
 
     @RequestMapping(path = "/test")
     public String test() {
-        BookInput bookInput = new BookInput();
-        bookInput.setId(666L);
-        bookInput.setName("test");
-        bookInput.setEdition(1);
-        bookInput.setPrice(BigDecimal.valueOf(1.9));
-        bookInput.setStoreId(2L);
+        UserInput userInput = new UserInput.Builder()
+                .openId("111")
+                .password("111")
+                .nickName("111")
+                .loginToken("111")
+//                .createdAt(0L)
+                .build();
+        User book = UserDraft.$.produce(draft -> draft
+                .setOpenId("222")
+                .setPassword("222")
+                .setNickName("222")
+                .setLoginToken("222")
+//                .setCreatedAt(0L)
+        );
 
-        System.out.println(saveBook(bookInput));
+        System.out.println(saveUserInput(userInput));
+        System.out.println(saveUser(book));
 
         return "test";
     }
 
-    public long saveBook(BookInput input) {
+    public long saveUser(User user) {
         return sqlClient
                 .getEntities()
-                .save(input)
+                .save(user)
                 .getModifiedEntity()
-                // 如果`input.id`为null，返回自动分配的id
+                // 如果`user.id`为null，返回自动分配的id
+                .id();
+    }
+
+    public long saveUserInput(UserInput user) {
+        return sqlClient
+                .getEntities()
+                .save(user)
+                .getModifiedEntity()
+                // 如果`user.id`为null，返回自动分配的id
                 .id();
     }
 }

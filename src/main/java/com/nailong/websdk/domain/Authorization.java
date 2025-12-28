@@ -1,4 +1,4 @@
-package com.nailong.websdk.pojo;
+package com.nailong.websdk.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;

@@ -1,0 +1,17 @@
+export com.nailong.websdk.domain.po.User
+    -> package com.nailong.websdk.domain.dto
+
+// Input 用作保存指令输入
+input UserInput {
+    #allScalars(this)
+}
+
+// View 用作查询输出
+UserView {
+    #allScalars(this)
+}
+
+// Specification用作查询参数
+specification UserSpecification {
+    #allScalars(this)
+}

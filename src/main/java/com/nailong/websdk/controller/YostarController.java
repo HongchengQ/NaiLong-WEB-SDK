@@ -1,6 +1,6 @@
 package com.nailong.websdk.controller;
 
-import com.nailong.websdk.pojo.HttpRsp;
+import com.nailong.websdk.domain.HttpRsp;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

@@ -1,10 +1,9 @@
-package com.nailong.websdk.pojo;
+package com.nailong.websdk.domain;
 
 import com.nailong.websdk.exception.CommonException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 @Data
 @NoArgsConstructor

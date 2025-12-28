@@ -1,7 +1,7 @@
 package com.nailong.websdk.utils;
 
-import com.nailong.websdk.pojo.HotfixPatchList;
-import com.nailong.websdk.pojo.HttpRsp;
+import com.nailong.websdk.domain.HotfixPatchList;
+import com.nailong.websdk.domain.HttpRsp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ClassPathResource;
 

@@ -1,7 +1,7 @@
 package com.nailong.websdk.service.impl;
 
-import com.nailong.websdk.pojo.Authorization;
-import com.nailong.websdk.pojo.HttpRsp;
+import com.nailong.websdk.domain.Authorization;
+import com.nailong.websdk.domain.HttpRsp;
 import com.nailong.websdk.service.ICommonService;
 import com.nailong.websdk.utils.FileUtils;
 import org.springframework.stereotype.Service;

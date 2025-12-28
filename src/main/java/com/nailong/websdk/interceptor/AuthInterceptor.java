@@ -1,7 +1,7 @@
 package com.nailong.websdk.interceptor;
 
 import com.nailong.websdk.exception.AuthorizationHeadException;
-import com.nailong.websdk.pojo.Authorization;
+import com.nailong.websdk.domain.Authorization;
 import com.nailong.websdk.utils.JsonUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
