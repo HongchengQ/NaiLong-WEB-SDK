@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.log4j.Log4j2;
 import org.jspecify.annotations.NonNull;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 @Log4j2
@@ -26,7 +27,7 @@ public class GateWayRegionInterceptor implements HandlerInterceptor {
             @NonNull Object handler) {
         String region = request.getHeader("X-Region");
 
-        if (region == null) {
+        if (ObjectUtils.isEmpty(region)) {
             region = "cn";
             log.warn("未找到网关附加的区域头，针对这个请求已使用默认区域：{} -> {}", region, request.getServletPath());
         }

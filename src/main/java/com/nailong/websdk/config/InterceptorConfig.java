@@ -18,7 +18,10 @@ public class InterceptorConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/meta/**", "/res/**")
                 .order(1);
 
-        // 网关区域拦截器 - 获取网关添加的区域头，并将区域头放入request attribute
+        // 网关区域拦截器
+        //      - 它不做任何拦截相关操作，只做下面的内容
+        //      - 获取网关添加的区域头，并将区域头放入request attribute
+        //      - 如果未获取到内容 则使用默认区域(cn)
         registry
                 .addInterceptor(new GateWayRegionInterceptor())
                 .addPathPatterns("/meta/**", "/res/**")
