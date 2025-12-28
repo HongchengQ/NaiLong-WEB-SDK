@@ -1,6 +1,6 @@
 package com.nailong.websdk.pojo;
 
-import com.nailong.websdk.Pb;
+import com.nailong.websdk.proto.Pb;
 import lombok.Data;
 
 import java.util.List;

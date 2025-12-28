@@ -1,7 +1,7 @@
 package com.nailong.websdk.utils;
 
 
-import com.nailong.websdk.Pb;
+import com.nailong.websdk.proto.Pb;
 import com.nailong.websdk.config.AppProperties;
 import org.bouncycastle.asn1.nist.NISTNamedCurves;
 import org.bouncycastle.asn1.sec.SECNamedCurves;
