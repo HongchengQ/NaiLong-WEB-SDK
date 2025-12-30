@@ -6,9 +6,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import static com.nailong.websdk.utils.JsonUtils.parseJsonStrToObject;
 
@@ -76,13 +80,26 @@ public class FileUtils {
     }
 
     /**
-     * 我们需要验证文件是合规的对象
+     * 从程序运行目录的/hotfix路径读取热更文件
+     * 如果文件不存在，则回退到resources中读取
      *
-     * @param path ClassPathResource
+     * @param hotfixPath 相对于 hotfix 目录的文件路径
      * @return HotfixPatchList
      * @throws IOException IO 异常
      */
-    public static HotfixPatchList readHotFixPatch(String path) throws IOException {
-        return fileToObject(path, HotfixPatchList.class);
+    public static HotfixPatchList readHotFixPatch(String hotfixPath) throws IOException {
+        // 从程序运行目录的/hotfix路径读取文件
+        String fullPath = System.getProperty("user.dir") + File.separator + hotfixPath;
+        File file = new File(fullPath);
+        
+        if (file.exists()) {
+            // 从程序运行目录读取文件
+            String jsonStr = Files.readString(Paths.get(fullPath));
+            return parseJsonStrToObject(jsonStr, HotfixPatchList.class);
+        } else {
+            // 如果程序运行目录中不存在文件，则从resources中读取
+            log.info("在程序相对路径中未找到热更文件，尝试在自身jar包中寻找；您可以稍后将最新热更清单文件放入 ./hot_fix 目录中，不需要重启应用 {}", hotfixPath);
+            return fileToObject(hotfixPath, HotfixPatchList.class);
+        }
     }
 }
