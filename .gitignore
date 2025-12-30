@@ -33,5 +33,4 @@ build/
 .vscode/
 
 ### Hotfix ###
-/src/main/resources/hot_fix/
 /hot_fix/
