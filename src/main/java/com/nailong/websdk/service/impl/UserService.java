@@ -3,7 +3,7 @@ package com.nailong.websdk.service.impl;
 import com.nailong.websdk.dao.UserRepository;
 import com.nailong.websdk.model.dto.AuthorizationDto;
 import com.nailong.websdk.model.dto.LoginBodyDto;
-import com.nailong.websdk.model.dto.UserSetDataDto;
+import com.nailong.websdk.model.dto.UserSetDataBodyDto;
 import com.nailong.websdk.model.po.User;
 import com.nailong.websdk.model.vo.UserVo;
 import com.nailong.websdk.service.IUserService;
@@ -62,7 +62,7 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public int getSetInfoRetCode(AuthorizationDto authorizationDto, UserSetDataDto body) {
+    public int getSetInfoRetCode(AuthorizationDto authorizationDto, UserSetDataBodyDto body) {
         User user = getAccountFromHeader(authorizationDto);
         if (user == null) return 100403; // TOKEN_AUTH_FAILED
 

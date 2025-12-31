@@ -2,7 +2,7 @@ package com.nailong.websdk.service;
 
 import com.nailong.websdk.model.dto.AuthorizationDto;
 import com.nailong.websdk.model.dto.LoginBodyDto;
-import com.nailong.websdk.model.dto.UserSetDataDto;
+import com.nailong.websdk.model.dto.UserSetDataBodyDto;
 import com.nailong.websdk.model.po.User;
 import com.nailong.websdk.model.vo.UserVo;
 
@@ -14,5 +14,5 @@ public interface IUserService {
 
     UserVo<Object> getOrCreateUserResult(LoginBodyDto body) throws NoSuchAlgorithmException;
 
-    int getSetInfoRetCode(AuthorizationDto authorizationDto, UserSetDataDto body);
+    int getSetInfoRetCode(AuthorizationDto authorizationDto, UserSetDataBodyDto body);
 }

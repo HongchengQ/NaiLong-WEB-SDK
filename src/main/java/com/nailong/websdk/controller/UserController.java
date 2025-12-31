@@ -3,7 +3,7 @@ package com.nailong.websdk.controller;
 import com.nailong.websdk.model.dto.AuthorizationDto;
 import com.nailong.websdk.model.HttpRsp;
 import com.nailong.websdk.model.dto.LoginBodyDto;
-import com.nailong.websdk.model.dto.UserSetDataDto;
+import com.nailong.websdk.model.dto.UserSetDataBodyDto;
 import com.nailong.websdk.model.vo.UserVo;
 import com.nailong.websdk.service.IUserService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -44,7 +44,7 @@ public class UserController {
     }
 
     @RequestMapping(path = {"/set", "/set-info"})
-    public HttpRsp infoSet(HttpServletRequest handler, @RequestBody UserSetDataDto body) {
+    public HttpRsp infoSet(HttpServletRequest handler, @RequestBody UserSetDataBodyDto body) {
         // authorization 来自于拦截器中添加的属性 - authInfo
         AuthorizationDto authorizationDto = (AuthorizationDto) handler.getAttribute("authInfo");
 
