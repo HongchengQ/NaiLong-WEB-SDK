@@ -15,7 +15,7 @@ import static com.nailong.websdk.enums.ServletAttributeEnum.REGION;
 @RequiredArgsConstructor
 public class GateWayRegionInterceptor implements HandlerInterceptor {
 
-    AppProperties appProperties;
+    private final AppProperties appProperties;
 
     /**
      * 当网关为请求头附加区域信息时，将信息放入request attribute；假如没有信息则改为默认区域

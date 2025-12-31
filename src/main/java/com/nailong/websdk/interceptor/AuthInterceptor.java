@@ -7,12 +7,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.jspecify.annotations.NonNull;
-import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import static com.nailong.websdk.enums.ServletAttributeEnum.AUTH_INFO;
 
-@Component
 @RequiredArgsConstructor
 public class AuthInterceptor implements HandlerInterceptor {
 

@@ -3,6 +3,8 @@ package com.nailong.websdk.controller;
 import com.nailong.websdk.model.HttpRsp;
 import com.nailong.websdk.model.dto.AuthorizationDto;
 import com.nailong.websdk.service.ICommonService;
+import com.nailong.websdk.utils.AeadHelper;
+import com.nailong.websdk.utils.Utils;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.util.Base64;
 
 import static com.nailong.websdk.enums.ServletAttributeEnum.AUTH_INFO;
 
@@ -39,13 +42,13 @@ public class CommonController {
     }
 
     @RequestMapping(path = "/test")
-    public String test(HttpServletRequest handler) {
-        IO.println(AUTH_INFO.name());
-        IO.println(AUTH_INFO);
-        IO.println(AUTH_INFO.toString());
-        IO.println(AUTH_INFO.getStr());
+    public byte[] test(HttpServletRequest handler) throws Exception {
+        String sign = ((AuthorizationDto) handler.getAttribute(AUTH_INFO.getStr())).getSign();
+        byte[] signBytes = Base64.getDecoder().decode(sign);
 
-        return handler.getAttribute(AUTH_INFO.name()).toString();
+        IO.println(Utils.bytesToHex(signBytes));
+
+        return AeadHelper.decryptCBC(signBytes, "cn");
     }
 
 }
