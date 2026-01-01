@@ -22,24 +22,10 @@ public class MetaController {
     private final IMetaService metaService;
 
     /**
-     * @return 经过区域 key 加密的 serverList .html文件 (用浏览器访问时会直接下载这个html文件)
+     * @return 经过区域 key 加密的 serverList .html文件
      */
     @RequestMapping(path = "/serverlist.html")
-    public ResponseEntity<byte[]> serverListHtml(HttpServletRequest req) {
-        // region 来自于拦截器中添加的属性 - X-Region
-        String region = (String) req.getAttribute(REGION.getStr());
-
-        return ResponseEntity
-                .ok()
-                .contentType(APPLICATION_OCTET_STREAM)
-                .body(metaService.getServerList(region));
-    }
-
-    /**
-     * @return 经过区域 key 加密的 serverList 内容 (用浏览器访问时不会下载任何文件 它会以String类型展现在界面中)
-     */
-    @RequestMapping(path = "/serverlist")
-    public byte[] serverList(HttpServletRequest req) {
+    public byte[] serverListHtml(HttpServletRequest req) {
         return metaService.getServerList(
                 // 来自于拦截器中添加的属性 - X-Region
                 (String) req.getAttribute(REGION.getStr())
