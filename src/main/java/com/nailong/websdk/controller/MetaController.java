@@ -3,13 +3,11 @@ package com.nailong.websdk.controller;
 import com.nailong.websdk.service.IMetaService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import static com.nailong.websdk.enums.ServletAttributeEnum.REGION;
-import static org.springframework.http.MediaType.APPLICATION_OCTET_STREAM;
 
 /**
  * 此路由下发的内容都比较大，且不依赖逻辑判断，建议使用cdn或oss
@@ -36,14 +34,14 @@ public class MetaController {
      *
      * 工具箱
      * {
-     *   "AuthPID": "CN-NOVA",
-     *   "URL": "https://toolbox-stellasora.yostar.cn"
+     * "AuthPID": "CN-NOVA",
+     * "URL": "https://toolbox-stellasora.yostar.cn"
      * }
      * <p>
      * 官方社区
      * {
-     *   "AuthPID": "CN-BBS",
-     *   "URL": "https://bbs-stellasora.yostar.net/"
+     * "AuthPID": "CN-BBS",
+     * "URL": "https://bbs-stellasora.yostar.net/"
      * }
      *
      * @return 经过区域 key 加密的 serverList .html文件

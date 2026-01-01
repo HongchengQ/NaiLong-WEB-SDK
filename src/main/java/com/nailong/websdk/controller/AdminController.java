@@ -1,6 +1,7 @@
 package com.nailong.websdk.controller;
 
 import com.nailong.websdk.exception.BadRequestException;
+import com.nailong.websdk.exception.CommonException;
 import com.nailong.websdk.proto.Pb;
 import com.nailong.websdk.utils.AeadHelper;
 import com.nailong.websdk.utils.Utils;
@@ -42,7 +43,7 @@ public class AdminController {
 
             return rsp.toString();
         } else {
-            return Map.of("error", "Failed to fetch data from URL: " + url, "status", response.getStatusCode());
+            throw new CommonException("Failed to fetch data from URL: " + url, response.getStatusCode().value());
         }
     }
 }
