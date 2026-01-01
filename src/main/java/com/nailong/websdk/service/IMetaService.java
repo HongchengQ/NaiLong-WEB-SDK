@@ -11,4 +11,12 @@ public interface IMetaService {
     byte[] getServerList(String region);
 
     byte[] getPlatformPatch(String region, String platform);
+
+    /**
+     * 公告
+     *
+     * @param region
+     * @return
+     */
+    byte[] getNoticeList(String region) throws Exception;
 }

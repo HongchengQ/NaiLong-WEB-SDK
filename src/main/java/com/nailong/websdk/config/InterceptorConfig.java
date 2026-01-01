@@ -18,7 +18,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
         // 认证拦截器 - 参数完整性校验，并将解析后的对象放入request attribute
         registry
                 .addInterceptor(new AuthInterceptor())
-                .addPathPatterns("/user/**", "/common/**")
+                .addPathPatterns("/user/**", "/common/**", "/yostar/**")
                 .excludePathPatterns("/meta/**", "/res/**")
                 .order(1);
 

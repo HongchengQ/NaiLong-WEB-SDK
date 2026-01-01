@@ -14,6 +14,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -48,6 +49,19 @@ public class MetaService implements IMetaService {
         // 组装平台和区域为 metaHotfixPatchListMap 的 key
         String mapKey = region.toUpperCase(Locale.ROOT) + "_" + platform;
         return metaHotfixPatchListMap.get(mapKey);
+    }
+
+    /**
+     * 公告
+     *
+     * @param region
+     * @return
+     */
+    @Override
+    public byte[] getNoticeList(String region) throws Exception {
+        byte[] bytes = "{}".getBytes(StandardCharsets.US_ASCII);
+
+        return AeadHelper.encryptCBC(bytes, region);
     }
 
     @PostConstruct

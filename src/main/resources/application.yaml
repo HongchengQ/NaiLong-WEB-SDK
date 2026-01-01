@@ -47,3 +47,5 @@ app:
   nebulaCommandServerAuthToken: "HJHASDPIIQWEASDHHAN"
   # 没有网关为请求添加区域头信息时生效
   defaultRegion: "cn"
+  toolBoxUrl: "http://127.0.0.1"
+  openIpUrl: "127.0.0.1"

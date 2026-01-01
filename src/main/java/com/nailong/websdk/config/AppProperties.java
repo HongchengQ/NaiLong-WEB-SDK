@@ -1,6 +1,6 @@
 package com.nailong.websdk.config;
 
-import lombok.Data;
+import lombok.*;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,6 +14,8 @@ public class AppProperties {
     private String nebulaCommandServer;
     private String nebulaCommandServerAuthToken;
     private String defaultRegion;
+    private String toolBoxUrl;
+    private String openIpUrl;
 
     @Data
     public static class GateServer {
