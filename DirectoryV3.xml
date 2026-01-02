@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <trees>
-    <tree path="/src/main/java/com/nailong/websdk/service" title="逻辑处理"/>
-    <tree path="/src/main/java/com/nailong/websdk/controller" title="WEB 请求和响应"/>
-    <tree path="/src/main/java/com/nailong/websdk/domain" title="类"/>
-    <tree path="/src/main/java/com/nailong/websdk/dao" title="数据库操作"/>
-    <tree path="/src/main/java/com/nailong/websdk/service/impl" title="具体的实现逻辑"/>
-    <tree path="/src/main/java/com/nailong/websdk/interceptor" title="拦截器"/>
-    <tree path="/src/main/java/com/nailong/websdk/exception" title="自定义异常"/>
-    <tree path="/src/main/java/com/nailong/websdk/domain/po" title="数据库相关对象"/>
-    <tree path="/src/main/java/com/nailong/websdk/domain/vo" title="返回给前端的封装数据"/>
-    <tree path="/src/main/java/com/nailong/websdk/model/dto" title="接收前端数据" extension="" presentableText=""
+    <tree path="/src/main/java/com/nailong/chicken/web/service" title="逻辑处理"/>
+    <tree path="/src/main/java/com/nailong/chicken/web/controller" title="WEB 请求和响应"/>
+    <tree path="/src/main/java/com/nailong/chicken/web/domain" title="类"/>
+    <tree path="/src/main/java/com/nailong/chicken/web/dao" title="数据库操作"/>
+    <tree path="/src/main/java/com/nailong/chicken/web/service/impl" title="具体的实现逻辑"/>
+    <tree path="/src/main/java/com/nailong/chicken/web/interceptor" title="拦截器"/>
+    <tree path="/src/main/java/com/nailong/chicken/web/exception" title="自定义异常"/>
+    <tree path="/src/main/java/com/nailong/chicken/web/domain/po" title="数据库相关对象"/>
+    <tree path="/src/main/java/com/nailong/chicken/web/domain/vo" title="返回给前端的封装数据"/>
+    <tree path="/src/main/java/com/nailong/chicken/web/model/dto" title="接收前端数据" extension="" presentableText=""
           tooltipTitle="" icon="" textColor="" backgroundColor=""/>
-    <tree path="/src/main/java/com/nailong/websdk/model/po" title="数据库表" extension="" presentableText=""
+    <tree path="/src/main/java/com/nailong/chicken/web/model/po" title="数据库表" extension="" presentableText=""
           tooltipTitle="" icon="" textColor="" backgroundColor=""/>
-    <tree path="/src/main/java/com/nailong/websdk/model/vo" title="返回前端内容"/>
-    <tree path="/src/main/java/com/nailong/websdk/model/bo" title="业务对象"/>
-    <tree path="/src/main/java/com/nailong/websdk/controller/official" title="官方定义接口"/>
-    <tree path="/src/main/java/com/nailong/websdk/controller/expand" title="自定义扩展接口"/>
+    <tree path="/src/main/java/com/nailong/chicken/web/model/vo" title="返回前端内容"/>
+    <tree path="/src/main/java/com/nailong/chicken/web/model/bo" title="业务对象"/>
+    <tree path="/src/main/java/com/nailong/chicken/web/controller/official" title="官方定义接口"/>
+    <tree path="/src/main/java/com/nailong/chicken/web/controller/expand" title="自定义扩展接口"/>
 </trees>
