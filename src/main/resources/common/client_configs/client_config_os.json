@@ -30,29 +30,29 @@
       "DETECTION_ADDRESS": {
         "AUTO": {
           "DNS": [
-            "${url}",
-            "${url}",
-            "${url}/meta/serverlist.html"
+            "http://127.0.0.1:1178",
+            "http://127.0.0.1:1178",
+            "http://127.0.0.1:1178/meta/serverlist.html"
           ],
           "HTTP": [
-            "${url}",
-            "${url}",
-            "${url}"
+            "http://127.0.0.1:1178",
+            "http://127.0.0.1:1178",
+            "http://127.0.0.1:1178"
           ],
           "MTR": [
-            "${url}",
-            "${url}",
-            "${url}/meta/serverlist.html"
+            "http://127.0.0.1:1178",
+            "http://127.0.0.1:1178",
+            "http://127.0.0.1:1178/meta/serverlist.html"
           ],
           "PING": [
-            "${url}",
-            "${url}",
-            "${url}/meta/serverlist.html"
+            "http://127.0.0.1:1178",
+            "http://127.0.0.1:1178",
+            "http://127.0.0.1:1178/meta/serverlist.html"
           ],
           "TCP": [
-            "${url}",
-            "${url}",
-            "${url}/meta/serverlist.html"
+            "http://127.0.0.1:1178",
+            "http://127.0.0.1:1178",
+            "http://127.0.0.1:1178/meta/serverlist.html"
           ]
         },
         "ENABLE": true,
@@ -136,7 +136,7 @@
       "SURVEY_POPUP_TYPE": "Browser",
       "UDATA": {
         "Enable": false,
-        "URL": "${url}"
+        "URL": "http://127.0.0.1:1178"
       },
       "USER_AGREEMENT": "0.1",
       "YOSTAR_PREFIX": "yoyo"

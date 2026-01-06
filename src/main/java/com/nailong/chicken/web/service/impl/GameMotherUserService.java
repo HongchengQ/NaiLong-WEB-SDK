@@ -6,6 +6,7 @@ import com.nailong.chicken.web.model.po.User;
 import com.nailong.chicken.web.model.vo.GameMotherAuthVo;
 import com.nailong.chicken.web.service.IGameMotherService;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
 import java.security.NoSuchAlgorithmException;
 
@@ -22,9 +23,15 @@ public class GameMotherUserService extends UserService implements IGameMotherSer
 
         if (user == null) return null;
 
+        String token = user.loginToken();
+
+        if (ObjectUtils.isEmpty(token)) {
+            token = generateLoginToken(user);
+        }
+
         return GameMotherAuthVo.builder()
                 .uid(user.openId())
-                .token(generateLoginToken(user))
+                .token(token)
                 .account(user.openId())
                 .build();
     }

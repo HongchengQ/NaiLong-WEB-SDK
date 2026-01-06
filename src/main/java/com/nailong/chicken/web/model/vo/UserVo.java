@@ -11,17 +11,16 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserVo<T> {
     @JsonProperty("IsNew")
-    private boolean isNew;
+    private Boolean newAccount;
 
     @JsonProperty("IsTestAccount")
-    private boolean isTestAccount;
+    private boolean testAccount;
 
     @JsonProperty("Keys")
-    private List<UserKeyJson<T>> Keys;
+    private List<UserKeyJson<T>> keys;
 
     @JsonProperty("User")
     private UserJson<T> user; // cn
@@ -44,7 +43,7 @@ public class UserVo<T> {
 
     @Builder
     @Data
-    @NoArgsConstructor
+//    @NoArgsConstructor
     @AllArgsConstructor
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public static class UserKeyJson<T> {

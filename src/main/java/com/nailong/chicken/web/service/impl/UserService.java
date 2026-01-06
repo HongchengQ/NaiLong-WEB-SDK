@@ -130,12 +130,6 @@ public class UserService implements IUserService {
         return user;
     }
 
-    protected String generateLoginToken(Long userId) throws NoSuchAlgorithmException {
-        String loginToken = UserUtils.createSessionKey(String.valueOf(userId));
-        userRepository.updateToken(userId, loginToken);
-        return loginToken;
-    }
-
     protected String generateLoginToken(User user) throws NoSuchAlgorithmException {
         String loginToken = UserUtils.createSessionKey(String.valueOf(user));
         userRepository.updateToken(user, loginToken);
@@ -156,7 +150,6 @@ public class UserService implements IUserService {
         }
 
         UserVo<Object> userVo = new UserVo<>();
-        userVo.setNew(false);
         userVo.setTestAccount(false);
         userVo.setYostar( // 共有参数
                 UserVo.LoginYostarJson.builder()
@@ -169,6 +162,8 @@ public class UserService implements IUserService {
 
 
         if (pidName.equals("CN-NOVA")) {
+            userVo.setNewAccount(false);
+
             userVo.getYostar().setId(userIdNum);
             userVo.getYostar().setDefaultNickName("");
 
@@ -207,6 +202,8 @@ public class UserService implements IUserService {
                             .destroyAt(0)
                             .build());
         } else {
+            userVo.setNewAccount(null);
+
             userVo.getYostar().setId(userIdStr);
             userVo.getYostar().setAgreeAd(0);
 

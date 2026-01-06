@@ -4,7 +4,7 @@ spring:
   # 数据库配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/jimmer_demo
+    url: jdbc:mysql://localhost:3306/nailoong
     username: root
     password: root
   # 全局启用虚拟线程
@@ -34,8 +34,8 @@ app:
   gateServerMap:
     cn:
       # 如果使用 nebula，agent-zone-xx 要改成 agent-zone-1
-      gateServerAddress: "http://127.0.0.1/agent-zone-cn"
-      reportServerAddress: "http://127.0.0.1/report"
+      gateServerAddress: "http://127.0.0.1:1179/agent-zone-cn"
+      reportServerAddress: "http://127.0.0.1:1178/report"
       bigVersion: 1.4 # 大版本号
       dataVersion: 77 # 小版本号
       statusCode: 1
@@ -47,10 +47,19 @@ app:
       dataVersion: 77
       statusCode: 1
       zoneId: 1
+
+    global:
+      # 如果使用 nebula，agent-zone-xx 要改成 agent-zone-1
+      gateServerAddress: "http://127.0.0.1:1179/agent-zone-global"
+      reportServerAddress: "http://127.0.0.1:1178/report"
+      bigVersion: 1.4 # 大版本号
+      dataVersion: 75 # 小版本号
+      statusCode: 1
+      zoneId: 1
   # 以下两个是配合 nebula 游戏服的设置，没有这个需求的话就改成空字符串
-  nebulaCommandServer: "http://127.0.0.1:80/api/command"
-  nebulaCommandServerAuthToken: "HJHASDPIIQWEASDHHAN"
+#  nebulaCommandServer: "http://127.0.0.1:80/api/command"
+#  nebulaCommandServerAuthToken: "HJHASDPIIQWEASDHHAN"
   # 没有网关为请求添加区域头信息时生效
-  defaultRegion: "cn"
+  defaultRegion: "global"
   toolBoxUrl: "http://127.0.0.1"
   openIpUrl: "127.0.0.1"
